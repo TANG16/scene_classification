@@ -23,6 +23,9 @@ in ```Run1.m``` and run it.
 <p align="center">
   <img width="600" height="160" src="https://uk.mathworks.com/help/vision/ug/bagoffeatures_visualwordsoverview.png">
 </p>
+<p align="center">
+  <img width="600" height="160" src="https://uk.mathworks.com/help/vision/ug/bagoffeatures_encodeoverview.png">
+</p>
 
 For every training sample, ```m``` fixed dimension image patches are extracted resulting in ```m x N``` features (```N```
 images). These features are being clustered into ```K``` centroids building a vocabulary of ```K``` visual words. The visual words
@@ -60,13 +63,18 @@ is extracted before the softmax layer. Finally, feature vectors are used to trai
 Unzip ```training.zip``` , ```testing.zip``` and keep them in the same directory as ```Run3.m```. Modify the hyperparameters
 in ```Run3.m``` and run it. Beware in feature vector dimensions and feature extraction layer if you change the pretrained net.
 
+Example output:
+<p align="center">
+  <img width="700" height="600" src="https://github.com/nikostsagk/scene_classification/blob/transfer_learning/output_fig.png">
+</p>
+
 #### Requirements:
 To run the repository, you need to have [VLFeat](http://www.vlfeat.org/install-matlab.html) and 
 [MatConvNet](http://www.vlfeat.org/matconvnet/) installed. MatConvNet does not need GPU but make sure that it is compiled
 after installing it.\
 You can type:
 ```
->> vl_version
->> vl_root
+>> vl_version %for vl_feat
+>> vl_root    %for matconvnet
 ```
 to check if each package is installed respectively.
