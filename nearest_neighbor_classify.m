@@ -1,10 +1,13 @@
 function predicted_categories = nearest_neighbor_classify(tr_arr_feats,train_labels,ts_arr_feats,k)
 % The structure of this algorithm belongs to James Hays for CS 143, Brown
 % University.
-% We re-implemented regarding our needs but is highly inspired by him.
-% During our report we demonstrate that we have a good understanding in what
-% we are doing.
-%Authors: Nikolaos Tsagkopoulos, Xin Chang
+% Inputs:
+% - tr_arr_feats: [m x p] training samples (m: samples, p: features)
+% - train_labels: labels
+% - ts_arr_feats: [m x p] testing samples
+% - k: No. neighbors
+%Author: Nikolas Tsagkopoulos
+
 testing_samples = size(ts_arr_feats, 1);
 
 %Measure the distance of every ts_feat from every tr_feat
