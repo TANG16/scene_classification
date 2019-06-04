@@ -68,6 +68,9 @@ Example output:
   <img width="700" height="600" src="https://github.com/nikostsagk/scene_classification/blob/transfer_learning/output_fig.png">
 </p>
 
+#### Going further:
+To obtain better results, try some data augmentation e.g: salt & pepper noise, image flipping, rotations, affine transformation etc...
+
 #### Requirements:
 To run the repository, you need to have [VLFeat](http://www.vlfeat.org/install-matlab.html) and 
 [MatConvNet](http://www.vlfeat.org/matconvnet/) installed. MatConvNet does not need GPU but make sure that it is compiled
