@@ -10,10 +10,10 @@ fixed resolution (e.g 16x16). Afterwards, the "tiny image" is packed into a vect
 normalised (zero mean and unit length). K-fold validation gives an estimate for the accuracy.
 You can choose the optimal k-value for the classifier.
 
-- __Run1.m__: Runs the "tiny image" classification and produces a text file with the predictions of the testing data
-- __nearest_neighbor_classify.m__: KNN classification
-- __training.zip__: Contains 15 scene categories each with 100 labelled samples
-- __testing.zip__: Contains 2988 unlabelled testing samples
+- ```Run1.m```: Runs the "tiny image" classification and produces a text file with the predictions of the testing data
+- ```nearest_neighbor_classify.m```: KNN classification
+- ```training.zip```: Contains 15 scene categories each with 100 labelled samples
+- ```testing.zip```: Contains 2988 unlabelled testing samples
 
 #### Instructions:
 Unzip ```training.zip``` , ```testing.zip``` and keep them in the same directory as ```Run1.m```. Modify the hyperparameters 
@@ -40,11 +40,11 @@ Overall time depends on:
 - number of features to get extracted in order to build the word histograms\
 
 As a method is highly consuming.
-- __Run2.m__: Runs the "bag of visual words" classification and produces a text file with the predictions of the testing data
-- __bag_of_words.m__: Builds a vocabulary of ```K``` words using fixed dimension image patches
-- __word_mining.m__: Extracts ```p``` features per training image and builds a word histogram
-- __vocabulary500.m__: Prebuilt vocabulary to avoid clustering time
-- __svm_classify.m__: This function will train a linear SVM for every category (i.e. one vs all) and then use the 
+- ```Run2.m```: Runs the "bag of visual words" classification and produces a text file with the predictions of the testing data
+- ```bag_of_words.m```: Builds a vocabulary of ```K``` words using fixed dimension image patches
+- ```word_mining.m```: Extracts ```p``` features per training image and builds a word histogram
+- ```vocabulary500.m```: Prebuilt vocabulary to avoid clustering time
+- ```svm_classify.m```: This function will train a linear SVM for every category (i.e. one vs all) and then use the 
 learned linear classifiers to predict the category of every test image.
 
 #### Instructions:
@@ -55,8 +55,8 @@ in ```Run2.m``` and run it.
 Run 3, makes use of a pretrained CNN to classify training samples. Specifically, each sample is fed to the CNN and a feature vector
 is extracted before the softmax layer. Finally, feature vectors are used to train an enseble of 15 one-vs-all classifiers.\
 
-- __Run3.m__: Runs the "transfer learning" classification and produces a text file with the predictions of the testing data
-- __imagenet-vgg-m-1024.mat__: Contains the pretrained CNN. More pretrained networks can be downloaded from
+- ```Run3.m```: Runs the "transfer learning" classification and produces a text file with the predictions of the testing data
+- ```imagenet-vgg-m-1024.mat```: Contains the pretrained CNN. More pretrained networks can be downloaded from
 [here](http://www.vlfeat.org/matconvnet/pretrained/).
 
 #### Instructions:
